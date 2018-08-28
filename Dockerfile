@@ -1,3 +1,3 @@
 FROM nginx
-COPY html /usr/share/nginx/html
+COPY marlin-nginx-dev.conf /etc/nginx/conf.d/marlin-nginx-dev.conf 
 
