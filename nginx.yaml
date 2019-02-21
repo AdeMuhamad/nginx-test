@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-deployment-rolling-update
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+        role: rolling-update
+    spec:
+      containers:
+      - name: nginx
+        image: asia.gcr.io/mindzzle-225411/nginx-custom:NginxCustomDEV-2 
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+  strategy:
+    type: RollingUpdate
+    rollingUpdate : 
+      maxSurge: 50%
