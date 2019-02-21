@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: asia.gcr.io/mindzzle-225411/nginx-custom:NginxCustomDEV-2 
+        image: asia.gcr.io/mindzzle-225411/nginx-custom:NginxCustomDEV-5 
         ports:
         - containerPort: 8080
         readinessProbe:
