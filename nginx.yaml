@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment-rolling-update
 spec:
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       labels:
